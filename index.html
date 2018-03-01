@@ -1,0 +1,33 @@
+<p id="content">
+    hello world
+</p>
+
+
+
+<script>
+    experiences = [{
+        'title': "HKBU",
+        'year': "2018",
+        'location': "Hong Kong"
+    }, {
+        'title': "SYSU",
+        'year': "2015",
+        'location': "Guangzhou"
+    }]
+
+    o = document.getElementById('content')
+    allItemString = ''
+    for (i = 0; i < experiences.length; i++) {
+        console.log(i)
+        itemString = '<li>' +
+            experiences[i]['title'] +
+            ' , ' +
+            experiences[i]['year'] +
+            ' , ' +
+            experiences[i]['location'] +
+            '</li>'
+        allItemString = allItemString + itemString
+    }
+
+    o.innerHTML = '<ul>' + allItemString + '</ul>'
+</script>
